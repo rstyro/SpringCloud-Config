@@ -1,0 +1,34 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://rstyro:rstyropwd@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: springcloud-config-client
+  profiles:
+    active: dev
+    
+---
+spring:
+  profiles: dev
+
+server:
+  port: 7700
+  name: dev
+---
+spring:
+  profiles: test
+  name: test
+
+server:
+  port: 7701
+
+---
+spring:
+  profiles: prd
+  name: prd
+
+server:
+  port: 7702
