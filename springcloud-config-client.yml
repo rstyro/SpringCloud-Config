@@ -15,8 +15,13 @@ spring:
   profiles: dev
 
 server:
-  port: 7800
-  name: dev
+  port: 7700
+
+info:
+    state: dev
+    name: info-dev-name
+    desc: info-dev-desc
+
 ---
 spring:
   profiles: test
@@ -25,6 +30,11 @@ spring:
 server:
   port: 7701
 
+info:
+    state: test
+    name: info-test-name
+    desc: info-test-desc
+
 ---
 spring:
   profiles: prd
@@ -32,3 +42,8 @@ spring:
 
 server:
   port: 7702
+
+info:
+    state: prd
+    name: info-prd-name
+    desc: info-prd-desc
